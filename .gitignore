@@ -1,0 +1,20 @@
+build/*
+images/*
+.DS_Store
+.DS_Store?
+.vscode/*
+
+# These files are copyrighted by Dr. Cem Yuksel of the University of Utah
+# and I do not have the rights to share them. See the README for more details
+headers/lights.h
+headers/materials.h
+headers/objects.h
+headers/photonmap.h
+headers/renderer.h
+headers/rng.h
+headers/scene.h
+headers/texture.h
+headers/xmlload.h
+src/texture.cpp
+src/viewport.cpp
+src/xmlload.cpp

@@ -1,0 +1,146 @@
+
+
+<xml>
+  <scene>
+    <background r="2" g="2" b="2" texture="../scenes/starmap.png">
+      <scale x="6" y="3"/>
+      <!-- <rotate value="35"/> -->
+      <translate x="5" y="-2"/>
+    </background>
+    <environment value="0.3" texture="../scenes/starmap.png">
+      <scale x="6" y="3"/>
+    </environment>
+
+    <!-- Objects -->
+    <object type="plane" name="WallBottom" material="floor">
+      <rotate angle="2" x="1"/>
+      <scale value="100"/>
+      <translate z="0.28"/>
+    </object>
+    <object type="obj" name="../scenes/utah_teapot_res12.obj" material="cow">
+      <scale value="0.3"/>
+      <rotate angle="-17" y="1"/>
+      <rotate angle="-2" x="1"/>
+      <translate x="-0.05" y="0.2" z="0.9"/>
+    </object>
+    <object name="ufo_full">
+      <scale value="0.05"/>
+      <rotate angle="20" y="1"/>
+      <rotate angle="-12" z="1"/>
+      <rotate angle="105" x="1"/>
+      <translate x="0" y="0.2" z="2.5"/>
+      <object type="obj" name="../scenes/ufo/ufo_body_hr.obj" material="ufo">
+      </object>
+      <object type="obj" name="../scenes/ufo/ufo_rim_hr.obj" material="ufo_rim">
+      </object>
+      <object type="obj" name="../scenes/ufo/ufo_dome_hr.obj" material="ufo_dome">
+      </object>
+    </object>
+ 
+    <!-- Materials -->
+    <material type="blinn" name="ufo">
+      <diffuse value="0.7" texture="../scenes/ufo/ufo_diffuse_test.png">
+        <scale x="1" y="-1"/>
+      </diffuse>
+      <specular value="0.8" texture="../scenes/ufo/ufo_spec.png">
+        <scale x="1" y="-1"/>
+      </specular>
+      <emission value="40" texture="../scenes/ufo/ufo_diffuse_glow.png">
+        <scale x="1" y="-1"/>
+      </emission>
+      <glossiness value="64"/>
+      <normal value="1" texture="../scenes/ufo/ufo_normal.png">
+        <scale x="1" y="-1"/>
+      </normal>
+    </material>
+    <material type="blinn" name="ufo_rim">
+      <diffuse value="0.7" texture="../scenes/ufo/ufo_diffuse2.png">
+        <scale x="1" y="-1"/>
+      </diffuse>
+      <specular value="0.4"/>
+      <emission value="40" texture="../scenes/ufo/ufo_diffuse2_glow.png">
+        <scale x="1" y="-1"/>
+      </emission>
+      <glossiness value="64"/>
+    </material>
+    <material type="blinn" name="ufo_dome">
+      <diffuse value="0"/>
+      <diffuse specular="0"/>
+      <!-- <specular r="0.1" g="1.0" b="0.1" value="0.3"/> -->
+      <glossiness value="1024"/>
+      <!-- <refraction r="0.1" g="1.0" b="0.1" value="0.6" index="1.52"/> -->
+      <emission r="0.1" g="1" b="0.1" value="6"/>
+    </material>
+    <material type="blinn" name="floor">
+      <diffuse r="0.6" g="0.4" b="0.2" value="0.24"/>
+      <specular value="0"/>
+    </material>
+    <material type="blinn" name="cow">
+      <diffuse value="0.7" texture="../scenes/cow_print.png">
+        <scale x="0.9" y="0.9"/>
+      </diffuse>
+      <specular value="0.5"/>
+      <glossiness value="1024"/>
+    </material>
+ 
+    <!-- Lights -->
+    <!-- <light type="point" name="pointLight">
+      <intensity r="0.6" g="1" b="0" value="500"/>
+      <position x="0.1" y="0" z="3.2"/>
+      <size value="0.5"/>
+      <attenuation value="1"/>
+    </light> -->
+    <light type="spot" name="spotLight">
+      <intensity r="0.5" g="1" b="0" value="2000"/>
+      <position x="0" y="0.2" z="3.5"/>
+      <size value="0.5"/>
+      <attenuation value="1"/>
+      <direction x="-0.02" y="-0.2" z="-1"/>
+      <angle value="0.47"/>
+    </light>
+    <!-- <light type="direct" name="directionalLight">
+      <intensity value="1"/>
+      <direction x="-1" y="0.5" z="-1"/>
+    </light> -->
+    <light type="point" name="domeLight">
+      <intensity r="0.2" g="0.2" b="1" value="2000"/>
+      <position x="0" y="-4" z="8"/>
+      <size value="0.5"/>
+      <attenuation value="1"/>
+    </light>
+    <light type="point" name="underLight">
+      <intensity r="0.4" g="0.2" b="1" value="700"/>
+      <position x="-6" y="-4" z="0.5"/>
+      <size value="1"/>
+      <attenuation value="1"/>
+    </light>
+    <light type="point" name="underLight2">
+      <intensity r="1" g="0" b="0.4" value="700"/>
+      <position x="6" y="2" z="0"/>
+      <size value="1"/>
+      <attenuation value="1"/>
+    </light>
+    <!-- <light type="point" name="backLight">
+      <intensity r="0.8" g="0.8" b="1" value="1000"/>
+      <position x="0.5" y="8" z="7"/>
+      <size value="1"/>
+      <attenuation value="1"/>
+    </light> -->
+    <!-- <light type="ambient" name="ambLight">
+      <intensity value="1"/>
+    </light> -->
+  </scene>
+ 
+  <camera gamma="sRGB">
+    <position x="0" y="-8" z="0.3"/>
+    <target x="0" y="0" z="2.2"/>
+    <up x="0" y="0" z="1"/>
+    <fov value="35"/>
+    <width value="1200"/>
+    <height value="1400"/>
+    <!-- <focaldist value="7.9"/>
+    <dof value="0.3"/> -->
+    <!-- <width value="600"/>
+    <height value="700"/> -->
+  </camera>
+</xml>
