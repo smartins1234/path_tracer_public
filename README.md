@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/smartins1234/path_tracer_public/blob/main/images/render06_4096_cc.png?raw=true)
 
-Rendered at 1200 x 1400 resolution with 4096 samples per pixel. Render time: 0:15:33
+Rendered at 1200 x 1400 resolution with 4096 samples per pixel, no denoising applied. Render time: 0:15:33
 
 ## Implemented Features
 
